@@ -1,0 +1,46 @@
+= Userservice Demo Quickstart 
+Author Jann Schneider <jann.schneider@googlemail.com> 
+:toc:
+:homepage: https://gitlab.org/org.nblix/userservicedemo
+
+
+This document provides an overview of this demo project as well as some information about how to run and test it. 
+
+== Used Technologies 
+
+* Gradle as build tool 
+* Spring Boot starters:
+** Spring Boot Starter Web for REST capabilities 
+** Spring Boot Starter Test 
+* AsciidoctorPdf gradle plugin to generate the docs. 
+
+
+== REST Endpoints
+
+This demo project exposes the following REST endpoints: 
+
+|===
+| Endpoint | Method | Params | Description ||
+| getUserById | GET | Long id | Retrieve a specific user by its ID  
+| getAllUsers | GET | <None> | retrieve a list of all known users |
+| createUser | POST | String username, String password | Creates an user with the given arguments |
+| deleteUserById | DELETE | Long id | Deletes the user with the given ID | 
+| authenticateUser | GET | String username, String password | Retrieve the users information if authentication was successful or an error otherwise | 
+|===
+
+
+== Test and Run the project
+
+In order to run the given project you might want to 
+use the configured Gradle tasks bootRun and related: 
+
+* user $ ./gradlew bootRun # to start the demo application
+* user $ ./gradlew test # to run all tests 
+* user $ ./gradlew asciidoctorPdf # to generate the docs 
+
+
+== Known Issues 
+
+* This project is currently built using a source- and target compatibility of Java 11. 
+* For this demo a H2 database is used 
+* We are using SHA-512 for password hashing 
