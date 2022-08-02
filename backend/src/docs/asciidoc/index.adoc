@@ -1,7 +1,7 @@
 = Userservice Demo Quickstart 
 Author Jann Schneider <jann.schneider@googlemail.com> 
 :toc:
-:homepage: https://gitlab.org/org.nblix/userservicedemo
+:homepage: https://github.com/nblix/userservicedemoemo
 
 
 This document provides an overview of this demo project as well as some information about how to run and test it. 
